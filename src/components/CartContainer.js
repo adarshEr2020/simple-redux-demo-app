@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import { CLEAR_CART, GET_TOTALS } from "../actions";
 import CartItem from "./CartItem";
 const CartContainer = ({ cart = [], total, dispatch }) => {
- useEffect(()=>{
-  dispatch({type:GET_TOTALS})
- })
+  useEffect(() => {
+    dispatch({ type: GET_TOTALS });
+  }, []);
   if (cart.length === 0) {
     return (
       <section className="cart">

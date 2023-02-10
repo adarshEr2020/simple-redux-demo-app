@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import CartContainer from "./components/CartContainer";
 // items
-import cartItems from "./cart-items";
 import { createStore } from "redux";
 import reducer from "./reducer";
 
@@ -22,18 +21,10 @@ import reducer from "./reducer";
 // store.getState()-
 
 import { Provider } from "react-redux";
-// initial store
-const initialStore = {
-  cart: cartItems,
-  total: 105,
-  amount: 5,
-};
 
 // store
-
 const store = createStore(
   reducer,
-  initialStore,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
